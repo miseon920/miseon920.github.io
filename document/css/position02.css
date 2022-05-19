@@ -30,6 +30,7 @@ nav ul li a {
     height: 30px;
     background: #fff;
     padding: 5px;
+    cursor: pointer;
 }
 
 .mopen span {
