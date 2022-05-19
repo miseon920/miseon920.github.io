@@ -44,3 +44,20 @@ h1 {
     font-size: 20px;
     color: #f00;
 }
+
+h2 {
+    font-size: 25px;
+    padding-left: 15px;
+    display: inline-block
+}
+
+h2:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #f00;
+    margin-right: 5px;
+    vertical-align: middle;
+}
