@@ -37,7 +37,6 @@
     transform: scale(1);
 }
 
-.slick-active img,
 .first_slider figure.on img {
     opacity: 1;
     transform: scale(1.2);
