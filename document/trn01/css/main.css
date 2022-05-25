@@ -178,14 +178,14 @@ em과 rem 단위의 기준은 font-size 속성 값이라고 했는데, 정확히
 }
 
 /*visual*/
-.main_slicder img {
+/*.main_slicder img {
     width: 100%;
 }
 
 .main_slicder figure.on img {
     transform: scale(1.2);
     transition: 6s;
-}
+}*/
 
 .main_visual {
     position: relative;
@@ -225,4 +225,33 @@ em과 rem 단위의 기준은 font-size 속성 값이라고 했는데, 정확히
     height: 2px;
     background: var(--wc);
     margin: 2rem 0 0 auto;
+}
+
+/*.test_bg {
+    background: #f00 url(../img/main_bg01.jpg)no-repeat center/cover;
+    -색상 url() 반복 fixed(속성제거가능) 위치/size
+    -background-attachment는 ios 사용불가(fixed) 
+    height: 300px;
+    margin-bottom: 1000px;
+}*/
+
+.main_visual figure {
+    height: 30rem;
+    transition: 2s;
+}
+
+.main_visual .item01 {
+    background: url(../img/main_bg01.jpg)no-repeat center/100%;
+}
+
+.main_visual .item02 {
+    background: url(../img/main_bg02.jpg)no-repeat center/100%;
+}
+
+.main_visual .item03 {
+    background: url(../img/main_bg03.jpg)no-repeat center/100%;
+}
+
+.main_visual figure.on {
+    background-size: 150%;
 }
