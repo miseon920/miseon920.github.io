@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.top_banner {
+    position: relative;
+}
+
+.top_banner .button_box {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    text-align: right;
+}
+
+.top_banner .button_box button {
+    border: 0;
+    background: #f00;
+    width: 100px;
+    height: 20px;
+}
+
+.top_banner .container {
+    display: none;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top_banner button:after {
+    content: "close";
+}
+
+.top_banner.active button:after {
+    content: "open";
+}
+
+.top_banner.active button i {
+    transform: rotate(180deg);
+}
+
+.header {
+    line-height: 100px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
