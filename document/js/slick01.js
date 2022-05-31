@@ -1,5 +1,6 @@
 $(function () {
     //$('.test_slick').slick();
+    var hover_a = $('.main_visual .main_slider figure .inner a');
     $('.main_visual .main_slider').on('init reInit afterChange', function (event, slick, currentSlide) {
         //console.log(currentSlide);
         var total = slick.slideCount;
@@ -8,7 +9,6 @@ $(function () {
         cur.find('a').removeClass('check');
         //console.log(cur);
         cur.addClass('on').siblings().removeClass('on');
-        var hover_a = $('.main_visual .main_slider figure .inner a');
         $(hover_a).hover(function () {
             cur.find('a').addClass('check');
         });
