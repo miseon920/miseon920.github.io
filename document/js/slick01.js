@@ -3,7 +3,7 @@ $(function () {
     $('.main_visual .main_slider').on('init reInit afterChange', function (event, slick, currentSlide) {
         //console.log(currentSlide);
         var total = slick.slideCount;
-        $('.num').text(currentSlide ? currentSlide + 1 + '/' + total : 1 + '/' + total);
+        $('.num').text((currentSlide ? currentSlide + 1 : 1) + '/' + total);
         let cur = $('.slick-current');
         cur.find('a').removeClass('check');
         //console.log(cur);
