@@ -8,7 +8,7 @@ $(function () {
         cur.find('a').removeClass('check');
         //console.log(cur);
         cur.addClass('on').siblings().removeClass('on');
-        var hover_a = $('.main_visual .main_slider figure.on .inner a');
+        var hover_a = $('.main_visual .main_slider figure .inner a');
         $(hover_a).hover(function () {
             cur.find('a').addClass('check');
         });
