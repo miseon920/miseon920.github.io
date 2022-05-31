@@ -16,5 +16,9 @@ $(function () {
 
     $('.main_visual .main_slider').slick({
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+        pauseOnHover: false
     });
 });
