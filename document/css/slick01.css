@@ -75,9 +75,16 @@
     height: 5px;
     background: #333;
     margin: 0 5px;
+    position: relative;
 }
 
-.main_visual .main_slider .slick-dots li.slick-active {
+.main_visual .main_slider .slick-dots li.slick-active:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    animation: background 2s;
     background: #f00;
 }
 
@@ -137,4 +144,14 @@
 
 .main_visual .main_slider figure.on .inner>a.check {
     transition: unset;
+}
+
+@keyframes background {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
 }
