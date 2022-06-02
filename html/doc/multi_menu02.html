@@ -86,6 +86,10 @@
       nav > ul ul a {
         display: block;
         line-height: 40px;
+        /*
+        메뉴가 길어질 경우 line-height 대신 padding으로 처리하며
+        word-break: break-all; 속성을 주어 해결할 수 있다.
+        */
       }
       nav > ul > li:hover ul {
         inset: 90px auto auto 0;
