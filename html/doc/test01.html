@@ -34,7 +34,7 @@
         gap: 30px;
         text-align: center;
       }
-      nav > ul:before {
+      nav > ul::before {
         content: "";
         display: block;
         width: 100%;
@@ -71,17 +71,18 @@
       }
       /*
       nav > ul > li:hover ul,
-      nav > ul:hover:before {
+      nav > ul:hover::before {
         display: block;
       } */
       nav > ul:hover ul,
-      nav > ul:hover:before {
+      nav > ul:hover::before {
         height: 210px;
       }
       .main_visual {
         height: 500px;
         background: #333;
       }
+      /*가상선택자는  :: 두개쓰는 것이 좋다 ie9부터 지원, 가상제외는 : 쓸것*/
     </style>
   </head>
   <body>

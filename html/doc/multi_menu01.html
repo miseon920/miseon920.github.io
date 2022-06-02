@@ -53,7 +53,7 @@
         width: 100%;
         /*https://developer.mozilla.org/en-US/docs/Web/CSS/inset*/
       }
-      nav > ul > li ul:before {
+      nav > ul > li ul::before {
         content: "";
         width: 0;
         height: 0;
@@ -70,7 +70,7 @@
         z-index: 1;
         background: #fff;
       }
-      nav > ul > li:nth-child(2) ul:before {
+      nav > ul > li:nth-child(2) ul::before {
         width: 20px;
         height: 20px;
         transform: translateX(-50%) rotate(45deg);
