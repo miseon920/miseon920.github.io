@@ -51,6 +51,15 @@ cd 로 이동 또는 로컬폴더에서 마우스 우클릭-> git bash here
 git rm --cached . -rf
 상위 폴더로 가서 다시 푸쉬를 진행한다
 
+#깃폴더 삭제
+git rm --cached -r 폴더명
+
+#깃파일 삭제 
+git rm --cached -r 파일명 또는 git rm --cached 파일명 
+
+*폴더나 파일을 삭제 후 커밋을 꼭 해야줘야함
+commit , push
+
 #리액트
 노드js 설치후
 터미널에
