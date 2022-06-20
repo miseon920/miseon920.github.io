@@ -46,6 +46,11 @@ cd 로 이동 또는 로컬폴더에서 마우스 우클릭-> git bash here
 6. git add , git commit , git push origin main
 [https://chasonghui.tistory.com/44 참고]
 
+*깃폴더가 접근금지가 되어있을때
+해동 폴더로 가서 
+git rm --cached . -rf
+상위 폴더로 가서 다시 푸쉬를 진행한다
+
 #리액트
 노드js 설치후
 터미널에
