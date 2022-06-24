@@ -446,6 +446,9 @@ section img {
   text-align: center;
   border-top: 1px solid #ddd;
 }
+.product .inner {
+  position: relative;
+}
 .product h2 {
   font-size: 19px;
   font-weight: 700;
