@@ -75,12 +75,12 @@ $(function () {
     const scrollT = $(window).scrollTop();
     //console.log(scrollT);
     scroll();
-    if (target2 - 20 < scrollT && scrollT < target3) {
+    if (target2 - 150 < scrollT && scrollT < target3) {
       $(sec_li).each(function (eq) {
         var s_li = $(this);
         setTimeout(function () {
           s_li.addClass("in-effect");
-        }, eq * 300);
+        }, eq * 100);
       });
     } else {
       sec_li.removeClass("in-effect");

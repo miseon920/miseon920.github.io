@@ -402,10 +402,10 @@ section img {
   /* filter: grayscale(1); */
   opacity: 0.3;
 }
-.section03 .right figure.slick-active {
-  /* filter: grayscale(0); */
+/* .section03 .right figure.slick-active {
+   filter: grayscale(0);
   opacity: 1;
-}
+} */
 .section03 .img_box {
   position: relative;
 }
