@@ -46,13 +46,8 @@ $(function () {
   const sec_li = $(".event .inner > div ul li");
   const target2 = $("#event").offset().top;
 
-  // function getPosY(element) {
-  //   let posY = element.offsetTop;
-  //   if (element.offsetParent) {
-  //     posY += element.offsetParent.offsetTop;
-  //   }
-  //   return posY;
-  // }
+  /*https://michalsnik.github.io/aos/ [애니메이션] */
+
   $(window).on("scroll", function () {
     scroll();
     const scrollT = $(this).scrollTop();
