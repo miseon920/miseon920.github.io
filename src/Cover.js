@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FiArrowDown } from "react-icons/fi";
 import { portfolio } from "./Data";
 import { Link } from "react-router-dom";
 

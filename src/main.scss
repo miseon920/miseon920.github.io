@@ -8,6 +8,10 @@ $subColor5: #ebb2d6;
 $subColor6: #9f81cd;
 $subColor7: #766dc1;
 
+$tdely: 0.5s 0.5s;
+$tdely1: 0.5s 1s;
+$tdely2: 0.5s 1.5s;
+
 html {
   font-size: 10px;
   word-break: break-word;
@@ -28,9 +32,27 @@ body {
   color: $basicColor;
 
   .section {
+    .tit {
+      text-align: center;
+      & h2 {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+
+      .info {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+    }
     &.active h2 {
-      font-size: 10rem;
-      transition: 1s 1s;
+      transform: translateY(0);
+      opacity: 1;
+      transition: $tdely;
+    }
+    &.active .info {
+      transform: translateX(0);
+      opacity: 1;
+      transition: $tdely2;
     }
   }
 

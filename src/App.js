@@ -86,18 +86,11 @@ const App = () => {
                   <div className="section" key={idx}>
                     <div className="case">
                       <div className="inner">
-                        <div className="photo">
-                          <img src={it.src} alt="" />
-                        </div>
-                        <ul className="desc">
-                          <li>
-                            <h2>{it.title}</h2>
-                          </li>
-                          <li>{it.type}</li>
-                          <li>
-                            <p>{it.info}</p>
-                          </li>
-                          <li>
+                        <div className="tit">
+                          <h2>{it.title}</h2>
+
+                          {/* <div className="info">{it.content}</div> */}
+                          {/* <li>
                             {<strong>color</strong>}
                             <ol>
                               {it.color?.map((color, idx) => (
@@ -106,8 +99,8 @@ const App = () => {
                                 </li>
                               ))}
                             </ol>
-                          </li>
-                        </ul>
+                          </li> */}
+                        </div>
                       </div>
                     </div>
                   </div>
