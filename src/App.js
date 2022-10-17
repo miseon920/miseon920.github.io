@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { FiArrowDown } from "react-icons/fi";
-import { profile, portfolio } from "./Data";
+import { portfolio } from "./Data";
 import { Link } from "react-router-dom";
+import HomeNav from "./HomeNav";
 import Cover from "./Cover";
 import MainText from "./MainText";
+import RESUME from "./RESUME";
+import PROJECT from "./PROJECT";
 import "./reset.css";
 import "./main.scss";
 
@@ -17,6 +20,7 @@ const App = () => {
   // const ac = portfolio.map((it) => it.anchor);
   return (
     <div className="FP">
+      <HomeNav />
       <Cover on={on} setOn={setOn} />
       <header className="header">
         <div className="inner">
@@ -82,6 +86,8 @@ const App = () => {
                 </div>
               </div>
               {portfolio.map((it, idx) => {
+                const it_Tit = it.title;
+                //console.log(it_TIT);
                 return (
                   <div className="section" key={idx}>
                     <div className="case">
@@ -100,6 +106,14 @@ const App = () => {
                               ))}
                             </ol>
                           </li> */}
+                        </div>
+                        <div className="content">
+                          {
+                            {
+                              RESUME: <RESUME content={portfolio} />,
+                              PROJECT: <PROJECT content={portfolio} />,
+                            }[it_Tit]
+                          }
                         </div>
                       </div>
                     </div>

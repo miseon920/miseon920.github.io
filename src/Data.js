@@ -10,15 +10,7 @@ const portfolio = [
   {
     id: 1,
     title: "RESUME",
-    content: [
-      { stit: "Experience" },
-      {
-        stit: "Education",
-      },
-      {
-        stit: "Front end",
-      },
-    ],
+    content: ["Experience", "Education", "Frontend"],
   },
   {
     id: 2,
@@ -39,9 +31,9 @@ const portfolio = [
         stit: "ToDo List",
         slink: "https://tjbf4q.csb.app/",
         color: ["#d83d96"],
-        skill: "Html5,Css3,Javascript,React,Node.js",
+        skill: "Html5,Css3,Scss,Javascript,React,Node.js",
         info: "react로 제작한 todolist사이트",
-        work: "프론트엔드 (100%) / 반응형 홈페이지",
+        work: "프론트엔드 (100%)",
         etc: ["Local Storage를 이용한 데이터 저장"],
       },
       {
