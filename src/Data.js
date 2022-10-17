@@ -26,6 +26,26 @@ const portfolio = [
     content: [
       {
         id: 1,
+        stit: "영화사이트",
+        slink: "https://miseon920.github.io/disney/",
+        color: ["#016cf9"],
+        skill: "Html5,Css3,Javascript,React,Node.js",
+        info: "react로 제작한 영화사이트",
+        work: "프론트엔드 (100%) / 반응형 홈페이지",
+        etc: ["searchParams 이용하여 url 설정"],
+      },
+      {
+        id: 2,
+        stit: "ToDo List",
+        slink: "https://tjbf4q.csb.app/",
+        color: ["#d83d96"],
+        skill: "Html5,Css3,Javascript,React,Node.js",
+        info: "react로 제작한 todolist사이트",
+        work: "프론트엔드 (100%) / 반응형 홈페이지",
+        etc: ["Local Storage를 이용한 데이터 저장"],
+      },
+      {
+        id: 3,
         stit: "네오바이오텍",
         slink: "https://neobiotech.co.kr/",
         color: ["#d83d96"],
@@ -36,7 +56,7 @@ const portfolio = [
         etc: ["지디웹 디자인 어워즈 대상 수상"],
       },
       {
-        id: 2,
+        id: 4,
         stit: "캠핑스테이",
         slink: "http://www.campingstay.co.kr/",
         color: ["#1fb380", "#05afc0"],
@@ -51,7 +71,7 @@ const portfolio = [
         ],
       },
       {
-        id: 3,
+        id: 5,
         stit: "조은맘",
         slink: "http://xn--xz2b58vb0a.com/",
         color: ["#fecc00"],
@@ -62,7 +82,7 @@ const portfolio = [
         etc: ["웹페이지와 모바일 페이지가 분리되어져 있는 적응형 홈페이지"],
       },
       {
-        id: 4,
+        id: 6,
         stit: "몽키VPN",
         slink: "https://mongvpn.net",
         color: ["#ffd739"],
@@ -73,7 +93,7 @@ const portfolio = [
         etc: ["캔버스 효과 적용", "다국어 페이지 작업"],
       },
       {
-        id: 5,
+        id: 7,
         stit: "알리고",
         slink: "https://app.alrigo.co.kr/",
         color: ["#31a5ff"],
@@ -84,7 +104,7 @@ const portfolio = [
         etc: ["원페이지 형식 / 페이지 이동없이 섹션이 바뀌는 형식"],
       },
       {
-        id: 6,
+        id: 8,
         stit: "다니엘 앤 제시카",
         slink: "http://xn--xz2b58vb0a.com/",
         color: ["#e2c597"],
@@ -99,7 +119,7 @@ const portfolio = [
         ],
       },
       {
-        id: 7,
+        id: 9,
         stit: "브릴린 의원",
         slink: "http://www.brillynclinic.com/",
         color: ["#a7924f"],
@@ -110,7 +130,7 @@ const portfolio = [
         etc: ["메인 섹션별 애니메이션 적용"],
       },
       {
-        id: 8,
+        id: 10,
         stit: "해법에듀",
         slink: "http://xn--xz2b58vb0a.com/",
         color: ["#00a650"],
@@ -121,7 +141,7 @@ const portfolio = [
         etc: ["가맹점 찾기에 위치기반 지도플러그인 삽입"],
       },
       {
-        id: 9,
+        id: 11,
         stit: "다이퀘스트",
         slink: "https://www.diquest.com/",
         color: ["#00afec"],
@@ -132,7 +152,7 @@ const portfolio = [
         etc: ["고객사와 프로젝트 수 카운팅 효과"],
       },
       {
-        id: 10,
+        id: 12,
         stit: "가산프라스틱",
         slink: "http://gasanpvc.com/",
         color: ["#0e388c"],
@@ -143,7 +163,7 @@ const portfolio = [
         etc: ["좌측메뉴 디자인"],
       },
       {
-        id: 11,
+        id: 13,
         stit: "도키도키",
         slink: "https://dokidoki-japan.com/",
         color: ["#34396a"],
@@ -154,7 +174,7 @@ const portfolio = [
         etc: ["전체메뉴 3depth 형식 / 영카트 이용"],
       },
       {
-        id: 12,
+        id: 14,
         stit: "펫토랑",
         slink: "https://petorang.com/",
         color: ["#034223"],
@@ -165,7 +185,7 @@ const portfolio = [
         etc: ["쇼핑몰 홈페이지 / 영카트 이용"],
       },
       {
-        id: 13,
+        id: 15,
         stit: "포스트테일러",
         slink: "http://www.posttailor.com/",
         color: ["#c4424d"],
