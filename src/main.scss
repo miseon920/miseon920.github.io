@@ -54,6 +54,12 @@ body {
       opacity: 1;
       transition: $tdely2;
     }
+    .content {
+      display: flex;
+      .swiper-slide {
+        width: 300px;
+      }
+    }
   }
 
   .inner {
