@@ -1,0 +1,352 @@
+$basicColor: #333;
+$mainColor: #a951bf;
+$subColor1: #bf5160;
+$subColor2: #a951bf;
+$subColor3: #fbd1d3;
+$subColor4: #f198b0;
+$subColor5: #ebb2d6;
+$subColor6: #9f81cd;
+$subColor7: #766dc1;
+$wColor: #fff;
+
+$tdely: 0.5s 0.5s;
+$tdely1: 0.5s 1s;
+$tdely2: 0.5s 1.5s;
+
+html {
+  font-size: 10px;
+  word-break: break-word;
+  background: #f7f7f7;
+}
+
+body {
+  font-size: 1.6rem;
+}
+.modal_on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.modal_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  background: #fff;
+  z-index: 3;
+}
+.case {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.FP {
+  color: $basicColor;
+
+  .section {
+    .tit {
+      text-align: center;
+      & h2 {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+
+      .info {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+    }
+    &.active h2 {
+      transform: translateY(0);
+      opacity: 1;
+      transition: $tdely;
+    }
+    &.active .info {
+      transform: translateX(0);
+      opacity: 1;
+      transition: $tdely2;
+    }
+    .content {
+      display: flex;
+    }
+    &.PROJECT {
+      .swiper-slide {
+        position: relative;
+        width: 300px;
+        .img_box {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background: $basicColor;
+        }
+        .pr_info {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 0;
+          z-index: 1;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          opacity: 0;
+          // ul {
+          //   position: absolute;
+          //   bottom: 0;
+          //   height: 0;
+          //   width: 100%;
+          //   text-align: center;
+          // }
+          // .pr_bt {
+          //   transform: translateY(-100px);
+          //   opacity: 0;
+          // }
+        }
+        &.on {
+          .pr_info {
+            height: 200px;
+            opacity: 1;
+            transition: $tdely;
+          }
+        }
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: $wColor;
+        width: 30px;
+        height: 30px;
+        background: $basicColor;
+        border-radius: 50%;
+        margin-top: 0;
+        transform: translateY(-50%);
+      }
+      .swiper-button-prev:after,
+      .swiper-button-next:after {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .gnb {
+    // position: fixed;
+    // top: 50%;
+    // right: 5rem;
+    // transform: translateY(-50%);
+    // width: 3rem;
+    // z-index: 999;
+    ul {
+      display: flex;
+      gap: 15px;
+
+      li {
+        // font-size: 0;
+        // position: relative;
+        // height: 2rem;
+
+        // a {
+        //   display: block;
+        //   height: 2rem;
+
+        //   &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     width: 50%;
+        //     height: 1px;
+        //     background: $mainColor;
+        //     transition: width 0.5s;
+        //   }
+        // }
+        a {
+          display: block;
+          font-size: 18px;
+          position: relative;
+        }
+        &.on a::before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: $mainColor;
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translate(-50%);
+          margin-bottom: 5px;
+          //animation: blink 1.2s ease infinite;
+        }
+      }
+    }
+  }
+  .arrow_bt {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 100%;
+    background: $mainColor;
+    animation: updown 2s ease infinite;
+    margin-top: 50px;
+    font-size: 23px;
+  }
+
+  //포폴시작
+  .home {
+    display: flex;
+    & > div {
+      flex: 1;
+    }
+  }
+}
+
+.cover {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: $basicColor;
+  color: #fff;
+  z-index: 2;
+
+  &.on {
+    display: block;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 15px 0;
+  z-index: 1;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // position: relative;
+  }
+}
+.cover_open {
+  position: absolute;
+  font-size: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  z-index: 5;
+
+  &.on {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    span {
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    right: 3px;
+    height: 1px;
+    background: $basicColor;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+    right: 3px;
+    height: 1px;
+    background: $basicColor;
+  }
+
+  span {
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 0.5px);
+      left: 3px;
+      right: 3px;
+      height: 1px;
+      background: $basicColor;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 0.5px);
+      left: 3px;
+      right: 3px;
+      height: 1px;
+      background: $basicColor;
+    }
+  }
+}
+
+.fp-watermark {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,16 +1,13 @@
-import React from "react";
-
-import { Link } from "react-router-dom";
-import HomeNav from "./HomeNav";
-import Main from "./Main";
-import "./reset.css";
-import "./main.scss";
+import React, { useSyncExternalStore } from "react";
+import HomeNav from "./components/HomeNav";
 
 const App = () => {
+  //it = openmodal:false
+  //console.log(openmodal); //false
   return (
-    <>
+    <div className={`Wrap`}>
       <HomeNav />
-    </>
+    </div>
   );
 };
 
