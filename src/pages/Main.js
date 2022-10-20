@@ -13,9 +13,25 @@ const Main = () => {
   const [num, setNum] = useState(1);
   const [con, setCon] = useState("HOME");
   const [on, setOn] = useState(false);
+  const [dfull, setDfull] = useState(false);
+
   const title = portfolio.map((it) => it.title);
   //console.log(title);
   // const ac = portfolio.map((it) => it.anchor);
+  //반응형 추가
+  const [width, setWidth] = useState(window.innerWidth);
+  //console.log(width);
+  useEffect(() => {
+    const Resize = () => {
+      setWidth(window.innerWidth);
+      //console.log(width);
+      //width < 1200 ? fullpage_api.destroy("all") : null;
+    };
+    window.addEventListener("resize", Resize);
+    return () => {
+      window.addEventListener("resize", Resize);
+    };
+  }, [width]);
   return (
     <div className="FP">
       <Cover on={on} setOn={setOn} />
@@ -55,6 +71,7 @@ const Main = () => {
         licenseKey={"YOUR_KEY_HERE"}
         scrollingSpeed={1000} /* Options here */
         anchors={["HOME", ...title]}
+        responsiveWidth={1200}
         afterLoad={(origin, destination) => {
           setNum(destination.index + 1);
           setCon(destination.title);
