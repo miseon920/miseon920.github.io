@@ -7,6 +7,7 @@ import Cover from "../components/Cover";
 import MainText from "../components/MainText";
 import RESUME from "../components/RESUME";
 import PROJECT from "../components/PROJECT";
+import Mail from "../components/Mail";
 
 const Main = () => {
   const [num, setNum] = useState(1);
@@ -102,7 +103,7 @@ const Main = () => {
               </div>
               {portfolio.map((it, idx) => {
                 const it_Tit = it.title;
-                //console.log(it_TIT);
+                //console.log(it_Tit);
                 return (
                   <div className={`section ${it_Tit}`} key={idx}>
                     <div className="case">
@@ -127,6 +128,7 @@ const Main = () => {
                             {
                               RESUME: <RESUME content={portfolio} />,
                               PROJECT: <PROJECT content={portfolio} />,
+                              CONTACT: <Mail />,
                             }[it_Tit]
                           }
                         </div>

@@ -1,6 +1,6 @@
 const profile = {
   name: "Kim Mi Seon",
-  email: "miseon920@naver.com",
+  email: "miseon920@gmail.com",
   tel: "https://open.kakao.com/me/Su_ny",
   blog: "https://msweb.tistory.com",
   github: "https://github.com/miseon920",
