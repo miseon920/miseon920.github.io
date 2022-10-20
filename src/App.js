@@ -1,9 +1,16 @@
-import React, { useSyncExternalStore } from "react";
+import React, { useEffect, useHistory } from "react";
 import HomeNav from "./components/HomeNav";
 
 const App = () => {
-  //it = openmodal:false
-  //console.log(openmodal); //false
+  // const history = useHistory();
+
+  // useEffect(() => {
+  //   let unlisten = history.listen((location) => {});
+
+  //   return () => {
+  //     unlisten();
+  //   };
+  // }, [history]);
   return (
     <div className={`Wrap`}>
       <HomeNav />
