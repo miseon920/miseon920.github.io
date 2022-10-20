@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const MainText = () => {
-  const txt = "뭐입니까?";
+  const txt = "퍼블리셔로 다져진 실력!\n프론트엔드로 보여 드리겠습니다.";
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
 
@@ -24,7 +24,7 @@ const MainText = () => {
       clearInterval(typingInterval);
     };
   });
-  return <div>{text}</div>;
+  return <div className="about_txt">{text}</div>;
 };
 
 export default MainText;

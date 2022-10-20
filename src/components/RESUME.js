@@ -9,7 +9,18 @@ const RESUME = ({ content }) => {
     <>
       {scon.map((el, idx) => (
         <div className="resume_box" key={idx}>
-          <h3 className="sub_tit">{el}</h3>
+          <h3 className="sub_tit">
+            {el}
+            {
+              {
+                Frontend: (
+                  <Link to="/skill" className="more_bt">
+                    Skill <FiArrowRight />
+                  </Link>
+                ),
+              }[el]
+            }
+          </h3>
           <div className="sub_content">
             {
               {
@@ -19,26 +30,45 @@ const RESUME = ({ content }) => {
                       <li>
                         <div>오감소프트(개발팀 / 주임)</div>
                         <div>2018.01~2020.02</div>
-
                         <div>
-                          프론트엔드,퍼블리싱,유지보수,까페24,그누보드,영카트,고도몰,부트스트랩,php기반
-                          홈페이지, 하이브리드 앱 퍼블리싱
+                          <span>업무</span>
+                          <span>
+                            프론트엔드,퍼블리싱,유지보수,까페24,그누보드,영카트,고도몰,부트스트랩,php기반
+                            홈페이지, 하이브리드 앱 퍼블리싱
+                          </span>
                         </div>
-                        <div>포토샵,제플린,브라켓,에디트플러스,파일질라</div>
+                        <div>
+                          <span>Tool</span>
+                          <span>
+                            포토샵,제플린,브라켓,에디트플러스,파일질라
+                          </span>
+                        </div>
                       </li>
                       <li>
                         <div>업티브(개발팀 / 대리)</div>
                         <div>2020.05~2020.09</div>
 
-                        <div>자사 B2B 사이트 퍼블리싱</div>
-                        <div>피그마,에디트플러스,이클립스,이클립스SVN</div>
+                        <div>
+                          <span>업무</span>
+                          <span>자사 B2B 사이트 퍼블리싱</span>
+                        </div>
+                        <div>
+                          <span>Tool</span>
+                          <span>피그마,에디트플러스,이클립스,이클립스SVN</span>
+                        </div>
                       </li>
                       <li>
                         <div>코어플라넷(디자인팀 / 사원(팀장))</div>
                         <div>2020.10~2022.04</div>
 
-                        <div>php기반 자사 및 외주 사이트 퍼블리싱</div>
-                        <div>VSCODE,파일질라,그누보드</div>
+                        <div>
+                          <span>업무</span>
+                          <span>php기반 자사 및 외주 사이트 퍼블리싱</span>
+                        </div>
+                        <div>
+                          <span>Tool</span>
+                          <span>VSCODE,파일질라,그누보드</span>
+                        </div>
                       </li>
                     </ul>
                   </>
@@ -79,15 +109,10 @@ const RESUME = ({ content }) => {
                               src={`${process.env.PUBLIC_URL}/img/${skill.name}.png`}
                               alt={skill.name}
                             />
-                            {skill.name}
+                            <span>{skill.name}</span>
                           </div>
                         </li>
                       ))}
-                      <li>
-                        <Link to="/skill">
-                          Skill <FiArrowRight />
-                        </Link>
-                      </li>
                     </ul>
                   </>
                 ),

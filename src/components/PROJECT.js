@@ -8,6 +8,7 @@ import SwiperCore, {
   Autoplay,
 } from "swiper";
 import { BsPlusLg, BsSearch } from "react-icons/bs";
+import { FiArrowRight } from "react-icons/fi";
 import Modal from "../pages/Modal";
 import { showModal } from "../data/redux_store";
 
@@ -32,7 +33,9 @@ const PROJECT = ({ content }) => {
   return (
     <div>
       <div className="">
-        <Link to="">프로젝트 더보기</Link>
+        <Link to="/portfolio" className="more_bt">
+          프로젝트 더보기 <FiArrowRight />
+        </Link>
       </div>
       <Swiper
         navigation

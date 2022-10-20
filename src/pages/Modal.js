@@ -1,15 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { GrClose } from "react-icons/gr";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { portfolio } from "../data/Data";
+import { showModal } from "../data/redux_store";
 
 const Modal = ({ scon }) => {
   const { openmodal } = useSelector((s) => s);
+  const dispatch = useDispatch();
   //   const [pnum, setPnum] = useState();
   //   const [hover, onHover] = useState(false);
   //console.log(mid);
   //console.log("openmodal", openmodal.id, scon);
   const matchId = scon.find((con) => con.id == openmodal.id);
+  const cover = useRef(null);
+  const wheelStop = (e) => {
+    e.stopPropagation();
+  };
+
+  useEffect(() => {
+    cover.current.addEventListener("wheel", wheelStop);
+    // return () => {
+    //   cover.current.removeEventListener("wheel", wheelStop);
+    // };
+  }, []);
   //console.log(matchId);
   //   const closeModal = () => {
   //     SetModal(false);
@@ -17,7 +30,7 @@ const Modal = ({ scon }) => {
   //   };
   //console.log(mid);
   return (
-    <div className={`modal ${openmodal.toggle ? "modal_on" : ""}`}>
+    <div className={`modal ${openmodal.toggle ? "modal_on" : ""}`} ref={cover}>
       {/* ${mid ? "on" : ""} */}
       {/* <button onClick={closeModal}>
         <GrClose />
@@ -26,6 +39,13 @@ const Modal = ({ scon }) => {
         <li>{item.stit}</li> 
       ))} */}
       <div className="modal_box">
+        <button
+          onClick={() => {
+            dispatch(showModal({ id: "", toggle: false }));
+          }}
+        >
+          <GrClose />
+        </button>
         <table>
           <caption>포토폴리오</caption>
           <tbody>
