@@ -60,7 +60,7 @@ const Modal = ({ scon }) => {
             <tr>
               <th scope="row">포인트 컬러</th>
               <td>
-                <ul>
+                <ul className="color">
                   {matchId.color.map((color) => (
                     <li key={color} style={{ background: color }}>
                       {color}
@@ -80,7 +80,7 @@ const Modal = ({ scon }) => {
             <tr>
               <th scope="row">세부사항</th>
               <td>
-                <ul>
+                <ul className="mdetail">
                   {matchId.etc.map((etc) => (
                     <li key={etc}>{etc}</li>
                   ))}
@@ -89,7 +89,11 @@ const Modal = ({ scon }) => {
             </tr>
             <tr>
               <th scope="row">사이트 확인</th>
-              <td>{matchId.slink}</td>
+              <td>
+                <a href={matchId.slink} target="_blank">
+                  {matchId.slink}
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>

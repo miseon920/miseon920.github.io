@@ -32,7 +32,7 @@ const PROJECT = ({ content }) => {
   //console.log(scon);
   return (
     <div>
-      <div className="">
+      <div className="more">
         <Link to="/portfolio" className="more_bt">
           프로젝트 더보기 <FiArrowRight />
         </Link>
@@ -67,7 +67,9 @@ const PROJECT = ({ content }) => {
             </div>
             <div className="pr_info">
               <ul>
-                <li> {pr.stit}</li>
+                <li>
+                  <h3>{pr.stit}</h3>
+                </li>
                 <li> {pr.info}</li>
                 {/* <li> {pr.work}</li> */}
               </ul>
