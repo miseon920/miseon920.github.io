@@ -16,13 +16,14 @@ const Mail = () => {
 
   const onSubmit = useCallback((e) => {
     e.preventDefault();
-    const inputNum = e.target.childElementCount - 1; // [D] 버튼한개 제외
+    const inputNum = e.target.length -1; // [D] 버튼한개 제외
     const data = new FormData(e.target);
     const entries = data.entries();
     let failNum = 0;
 
     for (let i = 0; i < inputNum; i++) {
       const next = entries.next();
+      //console.log(next);
       const key = next.value[0];
       const value = next.value[1];
 

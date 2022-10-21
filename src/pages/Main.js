@@ -34,7 +34,6 @@ const Main = () => {
   }, [width]);
   return (
     <div className="FP">
-      <Cover on={on} setOn={setOn} />
       <header className="header">
         <div className="inner">
           <h1>
@@ -45,7 +44,6 @@ const Main = () => {
             {/* {profile.name} 포토폴리오 {num} {con} */}
             {/* undefind의 경우 에러대신 렌더링을 안하므로 초기값으로 지정해둔것 */}
           </h1>
-
           <nav className="gnb">
             <ul>
               {["HOME", ...title].map((it, idx) => {
@@ -56,7 +54,8 @@ const Main = () => {
                 );
               })}
             </ul>
-          </nav>
+              </nav>
+               {/* <Cover on={on} setOn={setOn} /> */}
           {/* <button
             onClick={() => setOn(!on)}
             className={`cover_open ${on ? "on" : ""}`}
@@ -65,7 +64,6 @@ const Main = () => {
           </button> */}
         </div>
       </header>
-
       <ReactFullpage
         //fullpage options
         licenseKey={"YOUR_KEY_HERE"}
