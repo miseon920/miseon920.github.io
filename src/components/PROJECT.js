@@ -57,8 +57,11 @@ const PROJECT = ({ content }) => {
         className="swiper-container inner"
         onSlideChange={(swiper) => SetNum(swiper.realIndex)}
       >
-        {scon.map((pr, idx) => (
-          <SwiperSlide key={pr.id} className={`${num === idx ? "on" : ""}`}>
+        {scon.slice(0, 14).map((pr, idx) => (
+          <SwiperSlide
+            key={pr.id}
+            className={`pr_item ${num === idx ? "on" : ""}`}
+          >
             <div className="img_box">
               <img
                 src={`${process.env.PUBLIC_URL}/img/project/pr${pr.id}.png`}
@@ -76,9 +79,9 @@ const PROJECT = ({ content }) => {
               <div className="pr_bt">
                 <button
                   // onClick={() => showModal(pr.id)}
-                  onClick={() =>
-                    dispatch(showModal({ id: pr.id, toggle: true }))
-                  }
+                  onClick={() => {
+                    dispatch(showModal({ id: pr.id, toggle: true }));
+                  }}
                 >
                   {/* /* to={`/Portfolio/${pr.id}`}  */}
                   More <BsPlusLg />

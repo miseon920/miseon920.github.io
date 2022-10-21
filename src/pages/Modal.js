@@ -1,27 +1,37 @@
 import React, { useEffect, useState, useRef } from "react";
 import { GrClose } from "react-icons/gr";
 import { useDispatch, useSelector } from "react-redux";
-import { portfolio } from "../data/Data";
-import { showModal } from "../data/redux_store";
+import { showModal, fixed } from "../data/redux_store";
 
-const Modal = ({ scon }) => {
-  const { openmodal } = useSelector((s) => s);
+const Modal = ({ scon, dfull, setDfull }) => {
+  const { openmodal, fixedbody } = useSelector((s) => s);
   const dispatch = useDispatch();
   //   const [pnum, setPnum] = useState();
   //   const [hover, onHover] = useState(false);
   //console.log(mid);
   //console.log("openmodal", openmodal.id, scon);
   const matchId = scon.find((con) => con.id == openmodal.id);
-  const cover = useRef(null);
+  // const modal = useControl();
+  // console.log(modal);
+  const modal = useRef(null);
+  const body = document.querySelector("body");
   const wheelStop = (e) => {
     e.stopPropagation();
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
   };
-
+  //console.log(dfull);
   useEffect(() => {
-    cover.current.addEventListener("wheel", wheelStop);
-    // return () => {
-    //   cover.current.removeEventListener("wheel", wheelStop);
-    // };
+    if (dfull) {
+      body.classList.add("stop-scrolling");
+    } else {
+      modal.current.addEventListener("wheel", wheelStop);
+    }
+    return () => {
+      body.classList.remove("stop-scrolling");
+      //modal.current.removeEventListener("wheel", wheelStop);
+    };
   }, []);
   //console.log(matchId);
   //   const closeModal = () => {
@@ -30,7 +40,7 @@ const Modal = ({ scon }) => {
   //   };
   //console.log(mid);
   return (
-    <div className={`modal ${openmodal.toggle ? "modal_on" : ""}`} ref={cover}>
+    <div className={`modal ${openmodal.toggle ? "modal_on" : ""}`} ref={modal}>
       {/* ${mid ? "on" : ""} */}
       {/* <button onClick={closeModal}>
         <GrClose />

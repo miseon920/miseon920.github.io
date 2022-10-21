@@ -15,9 +15,21 @@ const openmodal = createSlice({
 
 export const { showModal } = openmodal.actions;
 
+const fixedbody = createSlice({
+  name: "fixedbody",
+  initialState: false,
+  reducers: {
+    fixed: (state) => !state,
+    //console.log(action.payload.id, !state.toggle);
+  },
+});
+
+export const { fixed } = openmodal.actions;
+
 export const redux_store = configureStore({
   reducer: {
     openmodal: openmodal.reducer,
+    fixedbody: fixedbody.reducer,
   },
 });
 

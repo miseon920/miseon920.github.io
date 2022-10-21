@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import emailjs from "emailjs-com";
-import useInput from "./useInput";
+import useInput from "../Hook.js/useInput";
 import { profile } from "../data/Data";
 import { GrMail } from "react-icons/gr";
 import { RiKakaoTalkFill } from "react-icons/ri";

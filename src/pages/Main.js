@@ -13,7 +13,6 @@ const Main = () => {
   const [num, setNum] = useState(1);
   const [con, setCon] = useState("HOME");
   const [on, setOn] = useState(false);
-  const [dfull, setDfull] = useState(false);
 
   const title = portfolio.map((it) => it.title);
   //console.log(title);
@@ -54,8 +53,8 @@ const Main = () => {
                 );
               })}
             </ul>
-              </nav>
-               {/* <Cover on={on} setOn={setOn} /> */}
+          </nav>
+          {/* <Cover on={on} setOn={setOn} /> */}
           {/* <button
             onClick={() => setOn(!on)}
             className={`cover_open ${on ? "on" : ""}`}
