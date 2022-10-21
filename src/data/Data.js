@@ -24,7 +24,10 @@ const portfolio = [
         skill: "Html5,Css3,Javascript,React,Node.js",
         info: "react로 제작한 영화사이트",
         work: "프론트엔드 (100%) / 반응형 홈페이지",
-        etc: ["searchParams 이용하여 url 설정"],
+        etc: [
+          "axios를 이용하여 데이터 연결",
+          "usesearchParams 이용하여 url 설정",
+        ],
       },
       // {
       //   id: 2,

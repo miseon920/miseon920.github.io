@@ -16,7 +16,7 @@ const Mail = () => {
 
   const onSubmit = useCallback((e) => {
     e.preventDefault();
-    const inputNum = e.target.length -1; // [D] 버튼한개 제외
+    const inputNum = e.target.length - 1; // [D] 버튼한개 제외
     const data = new FormData(e.target);
     const entries = data.entries();
     let failNum = 0;
@@ -76,7 +76,7 @@ const Mail = () => {
             </a>
           </li>
           <li>
-            <a href={`tel${profile.tel}`}>
+            <a href={`${profile.tel}`} target="_blank">
               <RiKakaoTalkFill />
               <span>{profile.tel}</span>
             </a>
@@ -97,7 +97,7 @@ const Mail = () => {
             </a>
           </li>
           <li>
-            <a href={`${process.env.PUBLIC_URL}/img/sunny.pdf`} target="_blank">
+            <a href={`${process.env.PUBLIC_URL}/img/Sunny.pdf`} target="_blank">
               <AiFillFileZip />
               <span>이력서</span>
             </a>
