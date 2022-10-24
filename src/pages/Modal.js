@@ -23,11 +23,12 @@ const Modal = ({ scon, dfull, setDfull }) => {
   };
   //console.log(dfull);
   useEffect(() => {
-    if (dfull) {
-      body.classList.add("stop-scrolling");
-    } else {
-      modal.current.addEventListener("wheel", wheelStop);
-    }
+    // if (dfull) {
+    //   body.classList.add("stop-scrolling");
+    // } else {
+    //   modal.current.addEventListener("wheel", wheelStop);
+    // }
+    body.classList.add("stop-scrolling");
     return () => {
       body.classList.remove("stop-scrolling");
       // modal.current.removeEventListener("wheel", wheelStop);
