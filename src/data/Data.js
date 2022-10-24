@@ -9,11 +9,6 @@ const profile = {
 const portfolio = [
   {
     id: 1,
-    title: "RESUME",
-    content: ["Experience", "Education", "Frontend"],
-  },
-  {
-    id: 2,
     title: "PROJECT",
     content: [
       {
@@ -681,7 +676,11 @@ const portfolio = [
       },
     ],
   },
-
+  {
+    id: 2,
+    title: "RESUME",
+    content: ["Experience", "Education", "Frontend"],
+  },
   {
     id: 3,
     title: "CONTACT",

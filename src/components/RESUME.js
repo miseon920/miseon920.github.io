@@ -3,7 +3,7 @@ import { skill } from "../data/Data";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 const RESUME = ({ content }) => {
-  const scon = content[0].content;
+  const scon = content[1].content;
   //console.log(scon);
   return (
     <>

@@ -11,7 +11,7 @@ const Portfolio = ({ portfolio }) => {
   const { openmodal } = useSelector((s) => s);
   const [dfull, setDfull] = useState(false);
   const dispatch = useDispatch();
-  const scon = portfolio[1].content;
+  const scon = portfolio[0].content;
   return (
     <>
       <div

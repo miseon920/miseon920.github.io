@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
@@ -19,7 +19,8 @@ import { useDispatch, useSelector } from "react-redux";
 SwiperCore.use([Navigation, Autoplay, Pagination, EffectCoverflow]);
 
 const PROJECT = ({ content }) => {
-  const scon = content[1].content;
+  const scon = content[0].content;
+  const [loading, setLoading] = useState(true);
   const [num, SetNum] = useState();
   const { openmodal } = useSelector((s) => s);
   // const [modal, SetModal] = useState(false);
@@ -30,6 +31,13 @@ const PROJECT = ({ content }) => {
   // };
   const dispatch = useDispatch();
   //console.log(scon);
+  const [loaded, setLoaded] = useState(false);
+  function onLoad() {
+    console.log("loaded");
+    // alert("lode");
+    setLoaded(true);
+  }
+
   return (
     <div>
       <div className="more">
@@ -62,10 +70,19 @@ const PROJECT = ({ content }) => {
             key={pr.id}
             className={`pr_item ${num === idx ? "on" : ""}`}
           >
-            <div className="img_box">
+            <div
+              className="img_box"
+              // style={{
+              //   background: `url(/img/project/pr${pr.id}.png)`,
+              //   backgroundSize: `cover`,
+              //   backgroundRepeat: `no-repeat`,
+              // }}
+            >
               <img
                 src={`${process.env.PUBLIC_URL}/img/project/pr${pr.id}.png`}
+                style={{ display: loaded ? "block" : "none" }}
                 alt={pr.stit}
+                onLoad={onLoad}
               />
             </div>
             <div className="pr_info">
@@ -94,6 +111,7 @@ const PROJECT = ({ content }) => {
           </SwiperSlide>
         ))}
       </Swiper>
+      {!loaded && <div className="loding">로딩?</div>}
       {
         openmodal.toggle && <Modal scon={scon} />
         // <Modal />

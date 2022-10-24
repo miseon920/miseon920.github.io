@@ -1,5 +1,6 @@
 import React, { useEffect, useHistory } from "react";
 import HomeNav from "./components/HomeNav";
+import Top_bt from "./components/Top_bt";
 
 const App = () => {
   // const history = useHistory();
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <div className={`Wrap`}>
       <HomeNav />
+      <Top_bt />
     </div>
   );
 };

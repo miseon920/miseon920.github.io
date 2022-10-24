@@ -30,7 +30,7 @@ const Modal = ({ scon, dfull, setDfull }) => {
     }
     return () => {
       body.classList.remove("stop-scrolling");
-      //modal.current.removeEventListener("wheel", wheelStop);
+      // modal.current.removeEventListener("wheel", wheelStop);
     };
   }, []);
   //console.log(matchId);
