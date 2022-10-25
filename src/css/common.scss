@@ -505,15 +505,24 @@ table {
   display: none;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
+  width: 100%;
   height: 100vh;
   background: $basicColor;
   color: #fff;
   z-index: 2;
+  padding:50px 30px;
 
   &.on {
     display: block;
+  }
+  ul li~li{
+    padding-top:15px;
+  }
+  a{
+    display:block;
+    text-align: center;
+    font-size:18px;
   }
 }
 
@@ -536,12 +545,14 @@ table {
 .cover_open {
   position: absolute;
   font-size: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 15px;
+  top:15px;
   width: 3rem;
   height: 3rem;
+  border:0;
+  background:transparent;
   z-index: 5;
+  display:none;
 
   &.on {
     &::before {
@@ -555,10 +566,12 @@ table {
     span {
       &::before {
         transform: rotate(45deg);
+        background:#fff;
       }
 
       &::after {
         transform: rotate(-45deg);
+        background: #fff;
       }
     }
   }

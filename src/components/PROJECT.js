@@ -23,6 +23,7 @@ const PROJECT = ({ content }) => {
   const [loading, setLoading] = useState(true);
   const [num, SetNum] = useState();
   const { openmodal } = useSelector((s) => s);
+  //console.log(openmodal);
   // const [modal, SetModal] = useState(false);
   // const [mid, setMid] = useState();
   // const showModal = (id) => {
@@ -33,7 +34,7 @@ const PROJECT = ({ content }) => {
   //console.log(scon);
   const [loaded, setLoaded] = useState(false);
   function onLoad() {
-    console.log("loaded");
+    //console.log("loaded");
     // alert("lode");
     setLoaded(true);
   }

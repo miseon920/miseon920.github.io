@@ -12,7 +12,7 @@ const Top_bt = () => {
   const scrllEvent = () => {
     let scy = window.scrollY;
     setScrollY(scy);
-    console.log(scy);
+    //console.log(scy);
   };
   useEffect(() => {
     window.addEventListener("scroll", scrllEvent);

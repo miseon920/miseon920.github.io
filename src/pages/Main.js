@@ -8,12 +8,16 @@ import MainText from "../components/MainText";
 import RESUME from "../components/RESUME";
 import PROJECT from "../components/PROJECT";
 import Mail from "../components/Mail";
+import { fixed } from "../data/redux_store";
+import { useDispatch, useSelector } from "react-redux";
 
 const Main = () => {
   const [num, setNum] = useState(1);
   const [con, setCon] = useState("HOME");
   const [on, setOn] = useState(false);
-
+  const { fixedbody } = useSelector((s) => s);
+  console.log(fixedbody);
+  const dispatch = useDispatch();
   const title = portfolio.map((it) => it.title);
   //console.log(title);
   // const ac = portfolio.map((it) => it.anchor);
@@ -31,6 +35,12 @@ const Main = () => {
       window.addEventListener("resize", Resize);
     };
   }, [width]);
+  const body = document.querySelector("body");
+  // useEffect(() => { 
+  //   fixedbody ? 
+  //     body.classList.add("stop-scrolling")
+  //    : body.classList.remove("stop-scrolling");
+  // },[]);
   return (
     <div className="FP">
       <header className="header">
@@ -54,13 +64,16 @@ const Main = () => {
               })}
             </ul>
           </nav>
-          {/* <Cover on={on} setOn={setOn} /> */}
-          {/* <button
-            onClick={() => setOn(!on)}
+         <Cover on={on} setOn={setOn} />
+          <button
+            onClick={() => {
+              setOn(!on);
+              dispatch(fixed());
+            }}
             className={`cover_open ${on ? "on" : ""}`}
           >
             <span>커버 나오는 버튼</span>
-          </button> */}
+          </button>
         </div>
       </header>
       <ReactFullpage
@@ -88,7 +101,7 @@ const Main = () => {
                       />
                     </div>
                     <div className="home_right">
-                      <MainText />
+                      <MainText width={width} setWidth={setWidth} />
                       <div className="about">
                         <ul>
                           <li>

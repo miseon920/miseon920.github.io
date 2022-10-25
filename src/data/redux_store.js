@@ -24,7 +24,7 @@ const fixedbody = createSlice({
   },
 });
 
-export const { fixed } = openmodal.actions;
+export const { fixed } = fixedbody.actions;
 
 export const redux_store = configureStore({
   reducer: {

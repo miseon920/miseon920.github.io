@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const MainText = () => {
+const MainText = ({width,setWidth }) => {
   const txt = "퍼블리셔로 다져진 실력!\n프론트엔드로 보여 드리겠습니다.";
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
@@ -19,8 +19,11 @@ const MainText = () => {
         return result;
       });
     }, 300);
-
+    //console.log(width);
     return () => {
+      if (width < 1200) { 
+        clearInterval(typingInterval);
+      }
       clearInterval(typingInterval);
     };
   });

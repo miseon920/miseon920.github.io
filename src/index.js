@@ -6,6 +6,7 @@ import App from "./App";
 import Scroll from "./components/Scroll";
 import "./css/reset.scss";
 import "./css/common.scss";
+import "./css/response.scss";
 import redux_store from "./data/redux_store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

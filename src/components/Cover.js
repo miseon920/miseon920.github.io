@@ -8,10 +8,11 @@ const Cover = ({ on, setOn }) => {
     e.stopPropagation();
   };
 
+ 
   useEffect(() => {
     cover.current.addEventListener("wheel", wheelStop);
     return () => {
-      cover.current.removeEventListener("wheel", wheelStop);
+     cover.current.removeEventListener("wheel", wheelStop);
     };
   }, []);
 
@@ -21,7 +22,7 @@ const Cover = ({ on, setOn }) => {
         {portfolio.map((it, idx) => {
           return (
             <li key={idx}>
-              <a href={`#${it.title}`} onClick={() => setOn(!on)}>
+              <a href={`#${it.title}`} onClick={()=>setOn(!on)}>
                 {it.title}
               </a>
             </li>
