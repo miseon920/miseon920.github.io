@@ -1,14 +1,140 @@
 @charset "utf-8";
 
-@media (max-width:1200px){
-    .header{
-        padding:15px 0;
+@media (max-width: 1200px) {
+  .header {
+    padding: 15px 0;
+    h1 a img {
+      width: 120px;
     }
-.gnb{
-    display:none;
+    .gnb {
+      display: none;
+    }
+    .cover_open {
+      display: block;
+    }
+  }
+  .sub {
+    padding: 15px;
+    h2 a img {
+      width: 120px;
+    }
+    h3 {
+      font-size: 21px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    .skill_box {
+      & > div:not(:first-of-type) {
+        padding-top: 30px;
+      }
+      ul {
+        padding: 15px;
+        li div:first-child {
+          width: 80px;
+          text-align: center;
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+  .case {
+    display: block;
+  }
+  .top_bt {
+    right: 15px;
+    bottom: 15px;
+  }
+  .FP {
+    .section {
+      .tit h2 {
+        padding-bottom: 30px;
+      }
+
+      .home {
+        display: block;
+        & > div {
+          width: 100% !important;
+          &.home_left {
+            text-align: center;
+            padding-bottom: 30px;
+          }
+        }
+      }
+      .arrow_bt {
+        display: block;
+        margin: 50px auto 0;
+      }
+      &.PROJECT .swiper {
+        padding-top: 15px;
+      }
+      &.RESUME .content {
+        display: block;
+        .resume_box ~ .resume_box {
+          padding-top: 30px;
+        }
+      }
+    }
+  }
 }
-    .cover_open{
-    display:block;
+
+@media (max-width: 1025px) {
+  .FP .section {
+    &.CONTACT {
+      .contact {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        .con_right form {
+          padding: 15px;
+        }
+      }
+    }
+  }
 }
-    
+
+@media (max-width: 768px) {
+  table {
+    th {
+      padding: 5px 0;
+      width: 80px;
+    }
+  }
+  .FP .section {
+    .home {
+      & > div.home_left img {
+        width: 200px;
+      }
+      & > div.home_right .about_txt {
+        font-size: 24px;
+        height: 80px;
+      }
+    }
+    &.RESUME {
+      .content .resume_box .sub_content {
+        padding: 15px;
+      }
+    }
+
+    &.CONTACT {
+      .contact {
+        .con_left li ~ li {
+          padding-top: 15px;
+        }
+        .copy {
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+  .sub.PROJECT .portfolio_box {
+    .pr_item .pr_info {
+      visibility: visible !important;
+      opacity: 1 !important;
+      height: auto !important;
+    }
+  }
 }

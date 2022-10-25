@@ -16,7 +16,7 @@ const Main = () => {
   const [con, setCon] = useState("HOME");
   const [on, setOn] = useState(false);
   const { fixedbody } = useSelector((s) => s);
-  console.log(fixedbody);
+  //console.log(fixedbody);
   const dispatch = useDispatch();
   const title = portfolio.map((it) => it.title);
   //console.log(title);
@@ -36,8 +36,8 @@ const Main = () => {
     };
   }, [width]);
   const body = document.querySelector("body");
-  // useEffect(() => { 
-  //   fixedbody ? 
+  // useEffect(() => {
+  //   fixedbody ?
   //     body.classList.add("stop-scrolling")
   //    : body.classList.remove("stop-scrolling");
   // },[]);
@@ -64,7 +64,7 @@ const Main = () => {
               })}
             </ul>
           </nav>
-         <Cover on={on} setOn={setOn} />
+          <Cover on={on} setOn={setOn} />
           <button
             onClick={() => {
               setOn(!on);

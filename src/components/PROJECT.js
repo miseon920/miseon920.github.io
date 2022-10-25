@@ -50,7 +50,7 @@ const PROJECT = ({ content }) => {
         navigation
         loop
         // pagination={{ clickable: true }}
-        // autoplay={{ delay: 3000 }}
+        //autoplay={{ delay: 3000 }}
         effect="coverflow"
         coverflowEffect={{
           rotate: 0,
@@ -60,7 +60,12 @@ const PROJECT = ({ content }) => {
           slideShadows: false,
           slideToClickedSlide: true,
         }}
-        slidesPerView={3}
+        slidesPerView={1}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
+        }}
         centeredSlides
         style={{ height: "500px" }}
         className="swiper-container inner"
