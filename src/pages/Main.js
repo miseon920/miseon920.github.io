@@ -11,7 +11,7 @@ import Mail from "../components/Mail";
 import { fixed } from "../data/redux_store";
 import { useDispatch, useSelector } from "react-redux";
 
-const Main = () => {
+const Main = ({ windowy, setWindowy }) => {
   const [num, setNum] = useState(1);
   const [con, setCon] = useState("HOME");
   const [on, setOn] = useState(false);
@@ -36,14 +36,15 @@ const Main = () => {
     };
   }, [width]);
   const body = document.querySelector("body");
-  // useEffect(() => {
-  //   fixedbody ?
-  //     body.classList.add("stop-scrolling")
-  //    : body.classList.remove("stop-scrolling");
-  // },[]);
+  useEffect(() => {
+    fixedbody
+      ? body.classList.add("stop-scrolling")
+      : body.classList.remove("stop-scrolling");
+  }, [fixedbody]);
+  //console.log(windowy);
   return (
     <div className="FP">
-      <header className="header">
+      <header className={`header ${width < 1200 && windowy > 0 ? "on" : ""}`}>
         <div className="inner">
           <h1>
             <Link to="/">
@@ -101,7 +102,12 @@ const Main = () => {
                       />
                     </div>
                     <div className="home_right">
-                      <MainText width={width} setWidth={setWidth} />
+                      <MainText
+                        width={width}
+                        setWidth={setWidth}
+                        windowy={windowy}
+                        setWindowy={setWindowy}
+                      />
                       <div className="about">
                         <ul>
                           <li>

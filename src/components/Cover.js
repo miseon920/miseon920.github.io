@@ -7,11 +7,10 @@ const Cover = ({ on, setOn }) => {
   const wheelStop = (e) => {
     e.stopPropagation();
   };
-
   // useEffect(() => {
-  //   cover.current.addEventListener("wheel", wheelStop);
+  //   // cover.current.addEventListener("wheel", wheelStop);
   //   return () => {
-  //    cover.current.removeEventListener("wheel", wheelStop);
+  //     //  cover.current.removeEventListener("wheel", wheelStop);
   //   };
   // }, []);
 

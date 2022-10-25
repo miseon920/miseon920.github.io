@@ -26,10 +26,22 @@ const fixedbody = createSlice({
 
 export const { fixed } = fixedbody.actions;
 
+const headfix = createSlice({
+  name: "headfix",
+  initialState: false,
+  reducers: {
+    hfix: (state) => !state,
+    //console.log(action.payload.id, !state.toggle);
+  },
+});
+
+export const { hfix } = headfix.actions;
+
 export const redux_store = configureStore({
   reducer: {
     openmodal: openmodal.reducer,
     fixedbody: fixedbody.reducer,
+    headfix: headfix.reducer,
   },
 });
 
