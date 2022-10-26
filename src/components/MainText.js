@@ -11,7 +11,7 @@ const MainText = ({ width, setWidth, windowy, setWindowy }) => {
         let result = prevTitleValue ? prevTitleValue + txt[count] : txt[0];
         setCount(count + 1);
 
-        if (count >= txt.length) {
+        if (count >= txt.length || text == "undifinded") {
           setCount(0);
           setText("");
         }

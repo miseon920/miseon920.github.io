@@ -320,6 +320,8 @@ body.stop-scrolling .modal_on {
   line-height: 50px;
   border-radius: 100%;
   background: $mainColor;
+  color: $basicColor;
+  border: 1px solid $basicColor;
   animation: updown 2s ease infinite;
   margin-top: 50px;
   font-size: 23px;
