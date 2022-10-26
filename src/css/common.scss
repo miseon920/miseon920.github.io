@@ -13,11 +13,6 @@ $tdely: 0.5s 0.5s;
 $tdely1: 0.5s 1s;
 $tdely2: 0.5s 1.5s;
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 html {
   font-size: 10px;
   word-break: break-word;
@@ -53,7 +48,8 @@ body.stop-scrolling .modal_on {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   background: #fff;
   padding: 30px;
   border-radius: 30px;

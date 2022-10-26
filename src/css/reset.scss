@@ -25,7 +25,6 @@ reset
   box-sizing: border-box;
 }
 
-*,
 *:before,
 *:after {
   box-sizing: inherit;
@@ -84,6 +83,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  word-break: break-all;
 }
 
 select,
