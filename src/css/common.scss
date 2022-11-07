@@ -168,6 +168,16 @@ body.stop-scrolling .modal_on {
         &:first-child li div:last-child {
           display: flex;
           gap: 20px;
+          // width: 50px;
+          span {
+            display: inline-block;
+            &:first-child {
+              width: 50px;
+            }
+            &:last-child {
+              width: calc(100% - 50px);
+            }
+          }
         }
         &:last-child {
           grid-column: 1 / 3;

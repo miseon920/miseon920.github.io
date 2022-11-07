@@ -29,7 +29,7 @@ const RESUME = ({ content }) => {
                     <ul>
                       <li>
                         <div>오감소프트(개발팀 / 주임)</div>
-                        <div>2018.01~2020.02</div>
+                        <div>2018.01~2020.02 [서울]</div>
                         <div>
                           <span>업무</span>
                           <span>
@@ -46,7 +46,7 @@ const RESUME = ({ content }) => {
                       </li>
                       <li>
                         <div>업티브(개발팀 / 대리)</div>
-                        <div>2020.05~2020.09</div>
+                        <div>2020.05~2020.09 [부산]</div>
 
                         <div>
                           <span>업무</span>
@@ -59,7 +59,7 @@ const RESUME = ({ content }) => {
                       </li>
                       <li>
                         <div>코어플라넷(디자인팀 / 사원(팀장))</div>
-                        <div>2020.10~2022.04</div>
+                        <div>2020.10~2022.04 [부산]</div>
 
                         <div>
                           <span>업무</span>
