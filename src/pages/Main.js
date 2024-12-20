@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef} from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { FiArrowDown } from "react-icons/fi";
-import { portfolio } from "../data/Data";
-import { Link } from "react-router-dom";
+import {FiArrowDown} from "react-icons/fi";
+import {portfolio} from "../data/Data";
+import {Link} from "react-router-dom";
 import Cover from "../components/Cover";
 import MainText from "../components/MainText";
 import RESUME from "../components/RESUME";
 import PROJECT from "../components/PROJECT";
 import Mail from "../components/Mail";
-import { fixed } from "../data/redux_store";
-import { useDispatch, useSelector } from "react-redux";
+import {fixed} from "../data/redux_store";
+import {useDispatch, useSelector} from "react-redux";
 
-const Main = ({ windowy, setWindowy }) => {
+const Main = ({windowy, setWindowy}) => {
   const [num, setNum] = useState(1);
   const [con, setCon] = useState("HOME");
   const [on, setOn] = useState(false);
-  const { fixedbody } = useSelector((s) => s);
+  const {fixedbody} = useSelector((s) => s);
   //console.log(fixedbody);
   const dispatch = useDispatch();
   const title = portfolio.map((it) => it.title);
@@ -37,9 +37,7 @@ const Main = ({ windowy, setWindowy }) => {
   }, [width]);
   const body = document.querySelector("body");
   useEffect(() => {
-    fixedbody
-      ? body.classList.add("stop-scrolling")
-      : body.classList.remove("stop-scrolling");
+    fixedbody ? body.classList.add("stop-scrolling") : body.classList.remove("stop-scrolling");
   }, [fixedbody]);
   //console.log(windowy);
   return (
@@ -89,49 +87,27 @@ const Main = ({ windowy, setWindowy }) => {
           setNum(destination.index + 1);
           setCon(destination.title);
         }}
-        render={({ state, fullpageApi }) => {
+        render={({state, fullpageApi}) => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
                 <div className="inner case">
                   <div className="home">
                     <div className="home_left">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/img/me.png`}
-                        alt="kms"
-                      />
+                      <img src={`${process.env.PUBLIC_URL}/img/me.png`} alt="kms" />
                     </div>
                     <div className="home_right">
-                      <MainText
-                        width={width}
-                        setWidth={setWidth}
-                        windowy={windowy}
-                        setWindowy={setWindowy}
-                      />
+                      <MainText width={width} setWidth={setWidth} windowy={windowy} setWindowy={setWindowy} />
                       <div className="about">
                         <ul>
-                          <li>
-                            안녕하세요. 프론트엔드 개발자를 꿈꾸는 김미선입니다.
-                          </li>
-                          <li>
-                            다년간의 퍼블리셔 경험으로 웹의 전반적인 지식을
-                            가지고 있으며 서비스와 사용자를 연결하는 프론트엔드
-                            분야에 관심이 많습니다.
-                          </li>
-                          <li>
-                            데이터와 동적 요소들로부터 서비스와 사용자 간
-                            상호작용을 통해 긍정적인 경험을 제공하고, 동시에
-                            서비스의 본질을 온전히 보여줄 수 있는 프론트엔드
-                            개발자가 되는 것이 저의 목표입니다.
-                          </li>
+                          <li>안녕하세요. 프론트엔드 개발자 김미선입니다.</li>
+                          <li>다년간의 퍼블리셔 경험으로 웹의 전반적인 지식을 가지고 있으며 서비스와 사용자를 연결하는 프론트엔드로 경험을 쌓고 있습니다.</li>
+                          <li>데이터와 동적 요소들로부터 서비스와 사용자 간 상호작용을 통해 긍정적인 경험을 제공하고, 동시에 서비스의 본질을 온전히 보여줄 수 있는 프론트엔드 개발자가 되는 것이 저의 목표입니다.</li>
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <button
-                    onClick={() => fullpageApi.moveSectionDown()}
-                    className="arrow_bt"
-                  >
+                  <button onClick={() => fullpageApi.moveSectionDown()} className="arrow_bt">
                     <FiArrowDown />
                   </button>
                 </div>
