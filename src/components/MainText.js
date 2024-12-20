@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 
-const MainText = ({ width, setWidth, windowy, setWindowy }) => {
-  const txt = "퍼블리셔로 다져진 실력!\n프론트엔드로 보여 드리겠습니다.";
+const MainText = ({width, setWidth, windowy, setWindowy}) => {
+  const txt = "안녕하세요.\n프론트엔드 개발자 김미선입니다.";
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
 

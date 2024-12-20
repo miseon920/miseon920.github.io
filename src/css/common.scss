@@ -214,12 +214,7 @@ body.stop-scrolling .modal_on {
               a span {
                 font-size: 18px;
                 color: #000;
-                background: linear-gradient(
-                    to right,
-                    transparent 50%,
-                    rgb(255, 218, 55) 50%
-                  )
-                  0px 0px / 200%;
+                background: linear-gradient(to right, transparent 50%, rgb(255, 218, 55) 50%) 0px 0px / 200%;
                 text-underline-offset: 3.5px;
                 transition: all 0.25s ease 0s;
               }
@@ -316,6 +311,9 @@ body.stop-scrolling .modal_on {
       }
       .about {
         line-height: 1.8;
+        span {
+          display: block;
+        }
       }
     }
   }
