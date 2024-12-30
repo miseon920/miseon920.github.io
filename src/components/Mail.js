@@ -119,7 +119,7 @@ const Mail = () => {
             </p> */}
           </li>
         </ul>
-        <div className="copy">&copy; 2022 Sunny, Inc.</div>
+        <div className="copy">&copy; 2025 Sunny, Inc.</div>
       </div>
       <div className="con_right">
         <form onSubmit={onSubmit}>
@@ -152,7 +152,7 @@ const Mail = () => {
             </tbody>
           </table>
           <div className="bt_box">
-            <button type="submit">발송</button>
+            <button type="submit">문의하기</button>
           </div>
         </form>
       </div>
