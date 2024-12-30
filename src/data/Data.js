@@ -673,6 +673,11 @@ const portfolio = [
 
 const skill = [
   {
+    id: 0,
+    name: "vue",
+    skill: "인터넷방송 플랫폼 회사 근무 당시 자회사 사이트는 뷰로 구성되었으며 뷰2를 이용하여 작업되었습니다. 또한 모니터링 사이트의 경우 vue3로 작업하였습니다. REST API등 프론트엔드 언어를 활용하여 개발 및 유지보수 하였습니다.",
+  },
+  {
     id: 1,
     name: "react",
     skill: "현재 포트폴리오는 리액트로 구현되었으며, 데이터(props)를 입력받아 View(state) 상태에 따라 React Hooks을 사용하여 컴포넌트를 활용 할수 있습니다. ",
