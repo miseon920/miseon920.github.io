@@ -69,7 +69,7 @@ body.stop-scrolling .modal_on {
   }
 }
 .section {
-  height: 100vh;
+  // height: 100vh;
   overflow: hidden !important;
 }
 .inner {
@@ -83,7 +83,7 @@ body.stop-scrolling .modal_on {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // height: 100vh;
+  height: 100%;
   overflow: hidden !important;
 }
 .FP {
@@ -197,6 +197,10 @@ body.stop-scrolling .modal_on {
       }
     }
     &.CONTACT {
+      height: 100vh;
+      .case {
+        height: 100%;
+      }
       .contact {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -300,6 +304,7 @@ body.stop-scrolling .modal_on {
     align-items: center;
     justify-content: center;
     gap: 50px;
+    height: 100vh;
     & > div {
       &.home_right {
         width: 500px;
@@ -397,6 +402,7 @@ table {
 
 /*서브 공통이라 뺌*/
 .PROJECT {
+  height: 100vh;
   .portfolio_box {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

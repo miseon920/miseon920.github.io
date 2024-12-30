@@ -1,15 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
-import { skill } from "../data/Data";
+import {skill} from "../data/Data";
 const Skill = () => {
-  console.log(skill);
+  //console.log(skill);
   const real_map = skill.map((skill) => (
     <li key={skill.id}>
       <div>
-        <img
-          src={`${process.env.PUBLIC_URL}/img/${skill.name}.png`}
-          alt={skill.name}
-        />
+        <img src={`${process.env.PUBLIC_URL}/img/${skill.name}.png`} alt={skill.name} />
         {skill.name}
       </div>
       <div>{skill.skill}</div>

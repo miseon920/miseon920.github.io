@@ -45,6 +45,7 @@
     display: block;
     padding-top: 50px;
     padding-bottom: 50px;
+    height: auto;
   }
   .top_bt {
     right: 15px;
@@ -52,12 +53,14 @@
   }
   .FP {
     .section {
+      height: auto !important;
       .tit h2 {
         padding-bottom: 30px;
       }
 
       .home {
         display: block;
+        height: auto;
         & > div {
           width: 100% !important;
           &.home_left {

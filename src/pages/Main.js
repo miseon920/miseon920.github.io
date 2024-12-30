@@ -75,89 +75,73 @@ const Main = ({windowy, setWindowy}) => {
           </button>
         </div>
       </header>
-      <ReactFullpage
-        //fullpage options
-        licenseKey={"YOUR_KEY_HERE"}
-        scrollingSpeed={1000} /* Options here */
-        anchors={["HOME", ...title]}
-        responsiveWidth={1200}
-        autoScrolling={false}
-        fitToSection={false}
-        afterLoad={(origin, destination) => {
-          setNum(destination.index + 1);
-          setCon(destination.title);
-        }}
-        render={({state, fullpageApi}) => {
-          return (
-            <ReactFullpage.Wrapper>
-              <div className="section">
-                <div className="inner case">
-                  <div className="home">
-                    <div className="home_left">
-                      <img src={`${process.env.PUBLIC_URL}/img/me.png`} alt="kms" />
-                    </div>
-                    <div className="home_right">
-                      <MainText width={width} setWidth={setWidth} windowy={windowy} setWindowy={setWindowy} />
-                      <div className="about">
-                        <ul>
-                          <li>
-                            <span>다년간의 퍼블리셔 경험으로 웹의 전반적인 지식을 가지고 있으며</span>
-                            <span>서비스와 사용자를 연결하는 프론트엔드로 경험을 쌓고 있습니다.</span>
-                          </li>
-                          <li>
-                            <span>데이터와 동적 요소들로부터 서비스와 사용자 간 상호작용을 통해 긍정적인</span>
-                            <span>경험을 제공하고, 동시에 서비스의 본질을 온전히 보여줄 수 있는 프론트엔드</span>
-                            <span>개발자가 되는 것이 저의 목표입니다.</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <button onClick={() => fullpageApi.moveSectionDown()} className="arrow_bt">
-                    <FiArrowDown />
-                  </button>
+      <>
+        <div className="section">
+          <div className="inner case">
+            <div className="home">
+              <div className="home_left">
+                <img src={`${process.env.PUBLIC_URL}/img/me.png`} alt="kms" />
+              </div>
+              <div className="home_right">
+                <MainText width={width} setWidth={setWidth} windowy={windowy} setWindowy={setWindowy} />
+                <div className="about">
+                  <ul>
+                    <li>
+                      <span>다년간의 퍼블리셔 경험으로 웹의 전반적인 지식을 가지고 있으며</span>
+                      <span>서비스와 사용자를 연결하는 프론트엔드로 경험을 쌓고 있습니다.</span>
+                    </li>
+                    <li>
+                      <span>데이터와 동적 요소들로부터 서비스와 사용자 간 상호작용을 통해 긍정적인</span>
+                      <span>경험을 제공하고, 동시에 서비스의 본질을 온전히 보여줄 수 있는 프론트엔드</span>
+                      <span>개발자가 되는 것이 저의 목표입니다.</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              {portfolio.map((it, idx) => {
-                const it_Tit = it.title;
-                //console.log(it_Tit);
-                return (
-                  <div className={`section ${it_Tit}`} key={idx}>
-                    <div className="case">
-                      <div className="inner">
-                        <div className="tit">
-                          <h2>{it.title}</h2>
-
-                          {/* <div className="info">{it.content}</div> */}
-                          {/* <li>
-                            {<strong>color</strong>}
-                            <ol>
-                              {it.color?.map((color, idx) => (
-                                <li style={{ background: color }} key={idx}>
-                                  {color}
-                                </li>
-                              ))}
-                            </ol>
-                          </li> */}
-                        </div>
-                        <div className="content">
-                          {
-                            {
-                              PROJECT: <PROJECT content={portfolio} />,
-                              RESUME: <RESUME content={portfolio} />,
-                              CONTACT: <Mail />,
-                            }[it_Tit]
-                          }
-                        </div>
-                      </div>
+            </div>
+            {/* <button onClick={() => fullpageApi.moveSectionDown()} className="arrow_bt">
+              <FiArrowDown />
+            </button> */}
+          </div>
+        </div>
+        <div>
+          {portfolio.map((it, idx) => {
+            const it_Tit = it.title;
+            //console.log(it_Tit);
+            return (
+              <div className={`section ${it_Tit}`} key={idx} id={it_Tit}>
+                <div className="case">
+                  <div className="inner">
+                    <div className="tit">
+                      <h2>{it.title}</h2>
+                      {/* <div className="info">{it.content}</div> */}
+                      {/* <li>
+                              {<strong>color</strong>}
+                              <ol>
+                                {it.color?.map((color, idx) => (
+                                  <li style={{ background: color }} key={idx}>
+                                    {color}
+                                  </li>
+                                ))}
+                              </ol>
+                            </li> */}
+                    </div>
+                    <div className="content">
+                      {
+                        {
+                          PROJECT: <PROJECT content={portfolio} />,
+                          RESUME: <RESUME content={portfolio} />,
+                          CONTACT: <Mail />,
+                        }[it_Tit]
+                      }
                     </div>
                   </div>
-                );
-              })}
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </>
     </div>
   );
 };
