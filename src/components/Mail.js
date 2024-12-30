@@ -1,10 +1,10 @@
-import React, { useState, useCallback } from "react";
+import React, {useState, useCallback} from "react";
 import emailjs from "emailjs-com";
 import useInput from "../Hook.js/useInput";
-import { profile } from "../data/Data";
-import { GrMail } from "react-icons/gr";
-import { RiKakaoTalkFill } from "react-icons/ri";
-import { AiFillGithub, AiFillFileZip } from "react-icons/ai";
+import {profile} from "../data/Data";
+import {GrMail} from "react-icons/gr";
+import {RiKakaoTalkFill} from "react-icons/ri";
+import {AiFillGithub, AiFillFileZip} from "react-icons/ai";
 // import { pdfjs } from "react-pdf";
 // import { Document, Page } from "react-pdf";
 // pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -35,23 +35,16 @@ const Mail = () => {
     }
 
     if (!failNum) {
-      emailjs
-        .sendForm(
-          "service_9z2l8al",
-          "template_nixnkez",
-          e.target,
-          "lMvYCOjTb1FbaG-me"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            alert("감사합니다");
-          },
-          (error) => {
-            console.log(error.text);
-            alert("스미마셍");
-          }
-        );
+      emailjs.sendForm("service_9z2l8al", "template_nixnkez", e.target, "lMvYCOjTb1FbaG-me").then(
+        (result) => {
+          console.log(result.text);
+          alert("감사합니다");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("스미마셍");
+        }
+      );
     }
   }, []);
 
@@ -89,15 +82,12 @@ const Mail = () => {
           </li>
           <li>
             <a href={profile.blog} target="_blank">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/tistory_logo.svg`}
-                alt=""
-              />
+              <img src={`${process.env.PUBLIC_URL}/img/tistory_logo.svg`} alt="" />
               <span>{profile.blog}</span>
             </a>
           </li>
           <li>
-            <a href={`${process.env.PUBLIC_URL}/img/Sunny.pdf`} target="_blank">
+            <a href={`${process.env.PUBLIC_URL}/img/sunny.pdf`} target="_blank">
               <AiFillFileZip />
               <span>이력서</span>
             </a>
@@ -140,14 +130,7 @@ const Mail = () => {
                   <label htmlFor="name">name</label>
                 </th>
                 <td>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="name"
-                    value={name}
-                    onChange={onChangeName}
-                  />
+                  <input type="text" id="name" name="name" placeholder="name" value={name} onChange={onChangeName} />
                 </td>
               </tr>
               <tr>
@@ -155,14 +138,7 @@ const Mail = () => {
                   <label htmlFor="email">email</label>
                 </th>
                 <td>
-                  <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="email"
-                    value={email}
-                    onChange={onChangeEmail}
-                  />
+                  <input type="text" id="email" name="email" placeholder="email" value={email} onChange={onChangeEmail} />
                 </td>
               </tr>
               <tr>
@@ -170,13 +146,7 @@ const Mail = () => {
                   <label htmlFor="content">message</label>
                 </th>
                 <td>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="message"
-                    value={message}
-                    onChange={onChangeMessage}
-                  />
+                  <textarea id="message" name="message" placeholder="message" value={message} onChange={onChangeMessage} />
                 </td>
               </tr>
             </tbody>
