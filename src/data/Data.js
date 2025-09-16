@@ -657,6 +657,26 @@ const portfolio = [
         work: "하드코딩 퍼블리싱(100%) - 반응형 홈페이지",
         etc: ["자회사에서 개발한 단축 url관리 사이트"],
       },
+      {
+        id: 59,
+        stit: "우성커머스",
+        slink: "https://ws.dainpass.co.kr/",
+        color: ["#2a7dea"],
+        skill: "react,scss,typeScript",
+        info: "자사홈페이지 프론트작업",
+        work: "반응형 홈페이지, 프론트엔드 작업 100%",
+        etc: ["자회사 홈페이지, 네이버 웹마스터도구에 등록"],
+      },
+      {
+        id: 60,
+        stit: "다인패스",
+        slink: `${window.location.origin}/dinpass`,
+        color: ["#ff7800", "#ffb900"],
+        skill: "react,scss,typeScript",
+        info: "자사플랫폼 서비스",
+        work: "비반응형 홈페이지, 프론트엔드 작업 100%, API연동, 로그인 기능, 상태 관리",
+        etc: ["정식서비스가 아니므로 작업한 일부분만 기입합니다."],
+      },
     ],
   },
   {
@@ -680,7 +700,7 @@ const skill = [
   {
     id: 1,
     name: "react",
-    skill: "현재 포트폴리오는 리액트로 구현되었으며, 데이터(props)를 입력받아 View(state) 상태에 따라 React Hooks을 사용하여 컴포넌트를 활용 할수 있습니다. ",
+    skill: "현재 포트폴리오는 리액트로 구현되었으며, 데이터(props)를 입력받아 View(state) 상태에 따라 React Hooks을 사용하여 컴포넌트를 활용 할수 있습니다. 쥬스탠드를 활용하여 로그인 기능을 구현하였으며 axios를 활용하여 rest api를 연결하였습니다. ",
   },
   {
     id: 2,
@@ -741,7 +761,7 @@ const skill = [
   {
     id: 13,
     name: "figma",
-    skill: "피그마를 이용하여 레이아웃 배치를 경험하였으며 현업에서 작업한 경험이 있습니다.",
+    skill: "피그마를 이용하여 레이아웃 배치를 경험하였으며 현업에서 피그마를 활용하여 프론트 단을 작업한 경험이 있습니다.",
   },
 ];
 
