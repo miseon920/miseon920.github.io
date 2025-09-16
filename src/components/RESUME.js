@@ -70,11 +70,11 @@ const RESUME = ({content}) => {
                         <div>2022.12 ~ 2024.02 [부산]</div>
                         <div>
                           <span>업무</span>
-                          <span>vue를 활용한 자사홈페이지 프론트엔드 작업,Typescript 및 RESTful API 연동,Git을 이용하여 버전관리 및 코드 관리, 컴포넌트 유지보수 및 개발,react를 활용한 자사 뉴홈페이지 프론트엔드 작업</span>
+                          <span>vue를 활용한 자사홈페이지 프론트엔드 작업,Typescript 및 RESTful API 연동,Git을 이용하여 버전관리 및 코드 관리, 컴포넌트 유지보수 및 개발,react를 활용한 자사 뉴홈페이지 프론트엔드 작업, vue2를 이용한 자사홈페이지 작업, vue3를 이용한 매니저관리페이지 작업, Nuxtjs 활용 및 VueX를 이용한 상태관리</span>
                         </div>
                         <div>
                           <span>Tool</span>
-                          <span>포토샵,제플린,VSCODE,GitHub,GitLab,Git fork</span>
+                          <span>포토샵,제플린,VSCODE,GitHub,GitLab,Git fork,지라,</span>
                         </div>
                       </li>
                       <li>
@@ -87,6 +87,18 @@ const RESUME = ({content}) => {
                         <div>
                           <span>Tool</span>
                           <span>포토샵,일러스트,VSCODE,SVN,파일질라</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>🟣우성소프텍 (개발팀 / 대리)</div>
+                        <div>2024.05 ~ 재직중 [부산]</div>
+                        <div>
+                          <span>업무</span>
+                          <span>react를 활용한 자사 홈페이지 및 플랫폼 프론트엔드 작업,Typescript 사용 및 RESTful API 연동,Git을 이용하여 버전관리 및 코드 관리, Zustand를 활용한 상태관리, axios를 이용하여 fetch 작업 진행</span>
+                        </div>
+                        <div>
+                          <span>Tool</span>
+                          <span>피그마,VSCODE,GitHub,Slack</span>
                         </div>
                       </li>
                     </ul>
