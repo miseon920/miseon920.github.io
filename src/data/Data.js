@@ -670,7 +670,7 @@ const portfolio = [
       {
         id: 60,
         stit: "다인패스",
-        slink: `${window.location.origin}/dinpass`,
+        slink: `${window.location.origin}/dainpass`,
         color: ["#ff7800", "#ffb900"],
         skill: "react,scss,typeScript",
         info: "자사플랫폼 서비스",

@@ -1,24 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { BsPlusLg, BsSearch } from "react-icons/bs";
+import React, {useEffect, useState} from "react";
+import {BsPlusLg, BsSearch} from "react-icons/bs";
 import Header from "../components/Header";
 import Modal from "../pages/Modal";
-import { showModal, fixed } from "../data/redux_store";
-import { useDispatch, useSelector } from "react-redux";
+import {showModal, fixed} from "../data/redux_store";
+import {useDispatch, useSelector} from "react-redux";
 
-const Portfolio = ({ portfolio }) => {
+const Portfolio = ({portfolio}) => {
   const [pnum, setPnum] = useState();
   const [hover, onHover] = useState(false);
-  const { openmodal } = useSelector((s) => s);
+  const {openmodal} = useSelector((s) => s);
   const [dfull, setDfull] = useState(false);
   const dispatch = useDispatch();
   const scon = portfolio[0].content;
   return (
     <>
-      <div
-        className={`PROJECT portfolio inner sub ${
-          openmodal.toggle ? "on" : ""
-        }`}
-      >
+      <div className={`PROJECT portfolio inner sub ${openmodal.toggle ? "on" : ""}`}>
         <Header />
         <h3>Portfolio</h3>
         <div className="portfolio_box">
@@ -36,10 +32,7 @@ const Portfolio = ({ portfolio }) => {
               className={`pr_item ${pnum === idx && hover ? "on" : "off"}`}
             >
               <div className="img_box">
-                <img
-                  src={`${process.env.PUBLIC_URL}/img/project/pr${pr.id}.png`}
-                  alt={pr.stit}
-                />
+                <img src={`${process.env.PUBLIC_URL}/img/project/${pr.id === 60 ? "dain01" : `pr${pr.id}`}.png`} alt={pr.stit} />
               </div>
               <div className="pr_info">
                 <ul>
@@ -53,7 +46,7 @@ const Portfolio = ({ portfolio }) => {
                   <button
                     // onClick={() => showModal(pr.id)}
                     onClick={() => {
-                      dispatch(showModal({ id: pr.id, toggle: true }));
+                      dispatch(showModal({id: pr.id, toggle: true}));
                       //dispatch(fixed());
                       setDfull(true);
                     }}
@@ -71,9 +64,7 @@ const Portfolio = ({ portfolio }) => {
         </div>
       </div>
       {
-        openmodal.toggle && (
-          <Modal scon={scon} dfull={dfull} setDfull={setDfull} />
-        )
+        openmodal.toggle && <Modal scon={scon} dfull={dfull} setDfull={setDfull} />
         // <Modal />
         // SetModal={SetModal} mid={mid} setMid={setMid} scon={scon}
       }

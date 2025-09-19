@@ -1,28 +1,23 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-  Navigation,
-  Pagination,
-  EffectCoverflow,
-  Autoplay,
-} from "swiper";
-import { BsPlusLg, BsSearch } from "react-icons/bs";
-import { FiArrowRight } from "react-icons/fi";
+import React, {useEffect, useRef, useState, useCallback} from "react";
+import {Link} from "react-router-dom";
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, {Navigation, Pagination, EffectCoverflow, Autoplay} from "swiper";
+import {BsPlusLg, BsSearch} from "react-icons/bs";
+import {FiArrowRight} from "react-icons/fi";
 import Modal from "../pages/Modal";
-import { showModal } from "../data/redux_store";
+import {showModal} from "../data/redux_store";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
-import { useDispatch, useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 SwiperCore.use([Navigation, Autoplay, Pagination, EffectCoverflow]);
 
-const PROJECT = ({ content }) => {
+const PROJECT = ({content}) => {
   const scon = content[0].content;
   const [loading, setLoading] = useState(true);
   const [num, SetNum] = useState();
-  const { openmodal } = useSelector((s) => s);
+  const {openmodal} = useSelector((s) => s);
   //console.log(openmodal);
   // const [modal, SetModal] = useState(false);
   // const [mid, setMid] = useState();
@@ -61,21 +56,19 @@ const PROJECT = ({ content }) => {
           slideToClickedSlide: true,
         }}
         slidesPerView={1}
+        initialSlide={59}
         breakpoints={{
           768: {
             slidesPerView: 3,
           },
         }}
         centeredSlides
-        style={{ height: "500px" }}
+        style={{height: "500px"}}
         className="swiper-container inner"
         onSlideChange={(swiper) => SetNum(swiper.realIndex)}
       >
-        {scon.slice(0, 14).map((pr, idx) => (
-          <SwiperSlide
-            key={pr.id}
-            className={`pr_item ${num === idx ? "on" : ""}`}
-          >
+        {scon.map((pr, idx) => (
+          <SwiperSlide key={pr.id} className={`pr_item ${num === idx ? "on" : ""}`}>
             <div
               className="img_box"
               // style={{
@@ -84,12 +77,7 @@ const PROJECT = ({ content }) => {
               //   backgroundRepeat: `no-repeat`,
               // }}
             >
-              <img
-                src={`${process.env.PUBLIC_URL}/img/project/pr${pr.id}.png`}
-                style={{ display: loaded ? "block" : "none" }}
-                alt={pr.stit}
-                onLoad={onLoad}
-              />
+              <img src={`${process.env.PUBLIC_URL}/img/project/${pr.id === 60 ? "dain01" : `pr${pr.id}`}.png`} style={{display: loaded ? "block" : "none"}} alt={pr.stit} onLoad={onLoad} />
             </div>
             <div className="pr_info">
               <ul>
@@ -103,7 +91,7 @@ const PROJECT = ({ content }) => {
                 <button
                   // onClick={() => showModal(pr.id)}
                   onClick={() => {
-                    dispatch(showModal({ id: pr.id, toggle: true }));
+                    dispatch(showModal({id: pr.id, toggle: true}));
                   }}
                 >
                   {/* /* to={`/Portfolio/${pr.id}`}  */}

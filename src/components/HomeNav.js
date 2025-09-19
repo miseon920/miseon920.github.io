@@ -36,8 +36,8 @@ const HomeNav = () => {
       <Routes>
         <Route path="/" element={<Main windowy={windowy} setWindowy={setWindowy} />}></Route>
         <Route path="/skill" element={<Skill Skill={skill} />}></Route>
-        <Route path="/Portfolio" element={<Project portfolio={portfolio} />}></Route>
-        <Route path="/Portfolio/:id" element={<Modal portfolio={portfolio} />}></Route>
+        <Route path="/portfolio" element={<Project portfolio={portfolio} />}></Route>
+        <Route path="/portfolio/:id" element={<Modal portfolio={portfolio} />}></Route>
         <Route path="/dainpass" element={<Dinpass />}></Route>
         <Route path="/*" element={<NotFound />} />
       </Routes>
