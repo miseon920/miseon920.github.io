@@ -2,6 +2,7 @@ import React, {useEffect, useState, useRef} from "react";
 import {GrClose} from "react-icons/gr";
 import {useDispatch, useSelector} from "react-redux";
 import {showModal, fixed} from "../data/redux_store";
+import {Link} from "react-router-dom";
 
 const Modal = ({scon, dfull, setDfull}) => {
   const {openmodal, fixedbody} = useSelector((s) => s);
@@ -109,7 +110,7 @@ const Modal = ({scon, dfull, setDfull}) => {
               <tr>
                 <th scope="row">세부개발 내용</th>
                 <td>
-                  <a href={matchId.plus}>https://miseon920.github.io{matchId.plus}</a>
+                  <Link to={matchId.plus}>https://miseon920.github.io{matchId.plus}</Link>
                 </td>
               </tr>
             )}
