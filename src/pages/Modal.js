@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
-import { GrClose } from "react-icons/gr";
-import { useDispatch, useSelector } from "react-redux";
-import { showModal, fixed } from "../data/redux_store";
+import React, {useEffect, useState, useRef} from "react";
+import {GrClose} from "react-icons/gr";
+import {useDispatch, useSelector} from "react-redux";
+import {showModal, fixed} from "../data/redux_store";
 
-const Modal = ({ scon, dfull, setDfull }) => {
-  const { openmodal, fixedbody } = useSelector((s) => s);
+const Modal = ({scon, dfull, setDfull}) => {
+  const {openmodal, fixedbody} = useSelector((s) => s);
   const dispatch = useDispatch();
   //   const [pnum, setPnum] = useState();
   //   const [hover, onHover] = useState(false);
@@ -34,7 +34,6 @@ const Modal = ({ scon, dfull, setDfull }) => {
       // modal.current.removeEventListener("wheel", wheelStop);
     };
   }, []);
-  //console.log(matchId);
   //   const closeModal = () => {
   //     SetModal(false);
   //     setMid("");
@@ -52,7 +51,7 @@ const Modal = ({ scon, dfull, setDfull }) => {
       <div className="modal_box">
         <button
           onClick={() => {
-            dispatch(showModal({ id: "", toggle: false }));
+            dispatch(showModal({id: "", toggle: false}));
           }}
         >
           <GrClose />
@@ -73,7 +72,7 @@ const Modal = ({ scon, dfull, setDfull }) => {
               <td>
                 <ul className="color">
                   {matchId.color.map((color) => (
-                    <li key={color} style={{ background: color }}>
+                    <li key={color} style={{background: color}}>
                       {color}
                     </li>
                   ))}
@@ -106,6 +105,14 @@ const Modal = ({ scon, dfull, setDfull }) => {
                 </a>
               </td>
             </tr>
+            {matchId.id === 60 && (
+              <tr>
+                <th scope="row">세부개발 내용</th>
+                <td>
+                  <a href={matchId.plus}>https://miseon920.github.io{matchId.plus}</a>
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
