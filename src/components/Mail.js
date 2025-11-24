@@ -87,7 +87,7 @@ const Mail = () => {
             </a>
           </li>
           <li>
-            <a href={`${process.env.PUBLIC_URL}/img/sunny.pdf`} target="_blank">
+            <a href={`${process.env.PUBLIC_URL}/img/sunny2.pdf`} target="_blank">
               <AiFillFileZip />
               <span>이력서</span>
             </a>
